@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#form')
   form.addEventListener('submit', handleForm)
 
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick)
+
 })
 
 const handleForm = function(event) {
@@ -53,4 +56,10 @@ const handleForm = function(event) {
   result.appendChild(newEntry);
 
   document.querySelector('form').reset();
+}
+
+const handleDeleteAllClick = function(event) {
+  event.preventDefault();
+  const emptyList = document.querySelector('#card-list')
+  emptyList.innerHTML = "";
 }
