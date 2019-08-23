@@ -1,1 +1,23 @@
- 
+html {
+  display: flex;
+}
+
+.flex {
+  display: flex;
+}
+
+ label {
+   width: 8em;
+ }
+
+ input {
+   width: 15em;
+ }
+
+ select {
+   width: 15.5em;
+ }
+
+ .flex-column {
+   flex-direction: column;
+ }

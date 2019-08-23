@@ -8,13 +8,13 @@
 </head>
 <body>
   <form id="form">
-    <div class="card-wrapper">
-      <div class="card-name">
-      <label for="name" class="primary">Name:</label>
-      <input type="text" id="name" required/>
+    <div class="flex card-wrapper flex-column">
+      <div class="flex card-name">
+        <label for="name" class="primary">Name:</label>
+        <input type="text" id="name" required/>
       </div>
 
-      <div class="card-rating">
+      <div class="flex card-rating">
         <label for="rating" class="Secondary">Stars:</label>
         <select id="rating">
           <option value=""disabled selected></option>
@@ -33,37 +33,39 @@
         </select>
       </div>
 
-      <div class="card-type">
+      <div class="flex card-type">
         <label for="type" class="secondary">Type:</label>
         <input type="text" id="type" required/>
       </div>
 
-      <div class="card-description">
+      <div class="flex card-description">
         <label for="description" class="secondary">Description:</label>
         <input type="text" id="description" required/>
       </div>
 
-      <div class="card-atk">
+      <div class="flex card-atk">
         <label for="atk" class="secondary">ATK:</label>
         <input type="number" min="0" max="5000" id="atk" required/>
       </div>
 
-      <div class="card-def">
+      <div class="flex card-def">
         <label for="def" class="secondary">DEF:</label>
         <input type="number" min="0" max="5000" id="def" required/>
       </div>
     </div>
 
-    <input type="submit" value="save"/>
+    <div class="flex">
+      <input type="submit" value="save"/>
+    </div>
 
-  </form>
-
-  <form id ="delete-button">
-   <input type="submit" value="delete-all"/>
   </form>
 
   <h1>Yu-Gi-Oh! Cards</h1>
   <div id="card-list"></div>
+
+  <form id ="delete-all" class="flex">
+    <input type="submit" value="delete-all"/>
+  </form>
 
 </body>
 </html>
