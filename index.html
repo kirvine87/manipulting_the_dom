@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Yu-Gi-Oh!</title>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+</head>
+<body>
+  <form id="form">
+    <div class="card-wrapper">
+      <div class="card-name">
+      <label for="name" class="primary">Name:</label>
+      <input type="text" id="name" required/>
+      </div>
+
+      <div class="card-rating">
+        <label for="rating" class="Secondary">Stars:</label>
+        <select id="rating">
+          <option value=""disabled selected></option>
+          <option value="star1">1</option>
+          <option value="star2">2</option>
+          <option value="star3">3</option>
+          <option value="star4">4</option>
+          <option value="star5">5</option>
+          <option value="star6">6</option>
+          <option value="star7">7</option>
+          <option value="star8">8</option>
+          <option value="star9">9</option>
+          <option value="star10">10</option>
+          <option value="star11">11</option>
+          <option value="star12">12</option>
+        </select>
+      </div>
+
+      <div class="card-type">
+        <label for="type" class="secondary">Type:</label>
+        <input type="text" id="type" required/>
+      </div>
+
+      <div class="card-description">
+        <label for="description" class="secondary">Description:</label>
+        <input type="text" id="description" required/>
+      </div>
+
+      <div class="card-atk">
+        <label for="atk" class="secondary">ATK:</label>
+        <input type="number" min="0" max="5000" id="atk" required/>
+      </div>
+
+      <div class="card-def">
+        <label for="def" class="secondary">DEF:</label>
+        <input type="number" min="0" max="5000" id="def" required/>
+      </div>
+    </div>
+
+    <input type="submit" value="save"/>
+  </form>
+
+  <h1>Yu-Gi-Oh! Cards</h1>
+  <div id="card-list"></div>
+
+</body>
+</html>
