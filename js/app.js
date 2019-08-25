@@ -19,12 +19,6 @@ const addEntry = function(text, element) {
 
 const handleForm = function(event) {
   event.preventDefault();
-  const name = event.target.name.value;
-  const rating = event.target.rating.value;
-  const type = event.target.type.value;
-  const description = event.target.description.value;
-  const atk = event.target.atk.value;
-  const def = event.target.def.value;
   const result = document.querySelector('#card-list')
 
   nameEntry = addEntry(this.name.value, 'h2');
@@ -33,6 +27,7 @@ const handleForm = function(event) {
   descriptionEntry = addEntry(this.description.value, 'h4');
   atkEntry = addEntry(this.atk.value, 'h3');
   defEntry = addEntry(this.def.value, 'h3');
+  statusEntry = addEntry(this.status.value, 'h3');
 
 
   const cardEntry = document.createElement('div');
@@ -42,6 +37,7 @@ const handleForm = function(event) {
   cardEntry.appendChild(descriptionEntry);
   cardEntry.appendChild(atkEntry);
   cardEntry.appendChild(defEntry);
+  cardEntry.appendChild(statusEntry);
   result.appendChild(cardEntry);
   cardEntry.classList.add('entry')
 
@@ -58,6 +54,6 @@ const handleStatus = function() {
   event.preventDefault();
   const result = document.querySelector('#card-list');
   if (document.querySelectorAll('input[name=status]:checked')) {
-    entry.textContent = "Not Owned"
+    entry.textContent = 'Not Owned'
   }
 }
