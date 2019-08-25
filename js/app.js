@@ -9,6 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+const addEntry = function(text, element) {
+  entry = document.createElement(element);
+  entry.textContent = text;
+  return entry
+}
+
+
 const handleForm = function(event) {
   event.preventDefault();
   const name = event.target.name.value;
@@ -19,41 +26,23 @@ const handleForm = function(event) {
   const def = event.target.def.value;
   const result = document.querySelector('#card-list')
 
-  const newEntry = document.createElement('div');
-  newEntry.className = 'newEntry';
+  nameEntry = addEntry(this.name.value, 'h2');
+  ratingEntry = addEntry(this.rating.value, 'h2');
+  typeEntry = addEntry(this.type.value, 'h3');
+  descriptionEntry = addEntry(this.description.value, 'h4');
+  atkEntry = addEntry(this.atk.value, 'h3');
+  defEntry = addEntry(this.def.value, 'h3');
 
-  const newName = document.createElement('h2');
-  const entryName = document.createTextNode(name);
-  newName.appendChild(entryName);
 
-  const newRating = document.createElement('h2');
-  const entryRating = document.createTextNode(rating);
-  newRating.appendChild(entryRating);
-
-  const newType = document.createElement('h3');
-  const entryType = document.createTextNode(type);
-  newType.appendChild(entryType);
-
-  const newDescription = document.createElement('h4');
-  const entryDescription = document.createTextNode(description);
-  newDescription.appendChild(entryDescription);
-
-  const newAtk = document.createElement('h3');
-  const entryAtk = document.createTextNode(atk);
-  newAtk.appendChild(entryAtk);
-
-  const newDef = document.createElement('h3');
-  const entryDef = document.createTextNode(def);
-  newDef.appendChild(entryDef);
-
-  newEntry.appendChild(newName);
-  newEntry.appendChild(newRating);
-  newEntry.appendChild(newType);
-  newEntry.appendChild(newDescription);
-  newEntry.appendChild(newAtk);
-  newEntry.appendChild(newDef);
-
-  result.appendChild(newEntry);
+  const cardEntry = document.createElement('div');
+  cardEntry.appendChild(nameEntry);
+  cardEntry.appendChild(ratingEntry);
+  cardEntry.appendChild(typeEntry);
+  cardEntry.appendChild(descriptionEntry);
+  cardEntry.appendChild(atkEntry);
+  cardEntry.appendChild(defEntry);
+  result.appendChild(cardEntry);
+  cardEntry.classList.add('entry')
 
   document.querySelector('form').reset();
 }

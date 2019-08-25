@@ -1,5 +1,12 @@
 html {
   display: flex;
+  background-image: url('../back.jpg');
+  background-repeat: no-repeat;
+  background-size: 1500px 1000px;
+}
+
+body {
+  width: 100%;
 }
 
 .flex {
@@ -21,3 +28,31 @@ html {
  .flex-column {
    flex-direction: column;
  }
+
+ #form {
+   background-color: #DCDCDC;
+   width: 100%;
+   opacity: 0.9;
+ }
+
+ h1 {
+   color: white;
+ }
+
+ #card-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.entry {
+  border: 3px solid #1C6EA4;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 10px;
+  background-color: peru;
+  width: 250px;
+  height: 300px;
+}
+
+
+ /* peru CD853F */
