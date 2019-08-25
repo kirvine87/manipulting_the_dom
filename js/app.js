@@ -55,8 +55,9 @@ const handleDeleteAll = function(event) {
 }
 
 const handleStatus = function() {
+  event.preventDefault();
   const result = document.querySelector('#card-list');
-  if (document.getElementById('no').checked) {
-    result.textContent = "Not Owned"
+  if (document.querySelectorAll('input[name=status]:checked')) {
+    entry.textContent = "Not Owned"
   }
 }
