@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const deleteAllButton = document.querySelector('#delete-all');
   deleteAllButton.addEventListener('click', handleDeleteAll);
 
+
 })
 
 const addEntry = function(text, element) {
@@ -51,4 +52,11 @@ const handleDeleteAll = function(event) {
   event.preventDefault();
   const emptyList = document.querySelector('#card-list')
   emptyList.innerHTML = "";
+}
+
+const handleStatus = function() {
+  const result = document.querySelector('#card-list');
+  if (document.getElementById('no').checked) {
+    result.textContent = "Not Owned"
+  }
 }

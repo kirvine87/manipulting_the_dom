@@ -54,6 +54,11 @@
       </div>
     </div>
 
+    <div id="owned">
+      <input type="radio" id="yes" name="status" value="yowned">Owned<br>
+      <input type="radio" id="no" name="status" value="nowned">Not Owned<br>
+    </div>
+
     <div class="flex">
       <input type="submit" value="save"/>
     </div>
@@ -66,6 +71,8 @@
   <form id ="delete-all" class="flex">
     <input type="submit" value="delete-all"/>
   </form>
+
+  <button onclick="handleStatus()">Check</button>
 
 </body>
 </html>
